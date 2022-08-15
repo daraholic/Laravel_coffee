@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Parameter', function (Blueprint $table) {
+        Schema::create('Parameters', function (Blueprint $table) {
             $table->bigIncrements('id',20);
             $table->integer('gram');
             $table->integer('water');
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Parameter');
+        Schema::dropIfExists('Parameters');
     }
 };

@@ -11,4 +11,9 @@ class Bean extends Model
 
     public $timestamps = false;
     protected $fillable = ['name','roast','regin','flaveor'];
+
+    public function parameter()
+    {
+        return $this->hasMany(Parameter::class, 'namespace_id', 'id');
+    }
 }

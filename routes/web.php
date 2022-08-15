@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/bean', [BeanController::class, 'getBeanList']);
+Route::get('/parameter', [BeanController::class, 'getParameterList']);
 // Route::get('/bean', 'BeanController@getBeanList');
