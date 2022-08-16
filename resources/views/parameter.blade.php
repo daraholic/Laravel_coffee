@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-  {{-- bean name --}}
-    {{-- <h2>{{}}</h2> --}}
 
 <table style="width:100%">
   <tr>
@@ -29,7 +27,7 @@
   @endif
 
 </table>
-
+<a href="/bean">bean list</a>
 <p>To make coffee better, you need to learn and practice.</p>
    
 </body>

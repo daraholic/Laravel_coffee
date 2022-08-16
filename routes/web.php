@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeanController;
+use App\Http\Controllers\ParameterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/bean', [BeanController::class, 'getBeanList']);
-Route::get('/parameter', [BeanController::class, 'getParameterList']);
-// Route::get('/bean', 'BeanController@getBeanList');
+Route::get('/parameter', [ParameterController::class, 'getParameterList']);

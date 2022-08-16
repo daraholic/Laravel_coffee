@@ -22,6 +22,3 @@ use App\Http\Controllers\ProjectController;
 Route::get('/greeting', function(){
     return 'Hello World';
 });
-Route::get('/bean', 'BeanController@getBeanList');
-
-// Route::get('/bean', [BeanController::class, 'getBeanList']);
