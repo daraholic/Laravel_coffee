@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\BeanService;
+use Illuminate\Http\Request;
 class BeanController extends Controller
 {
     public $beanService;
@@ -15,5 +16,13 @@ class BeanController extends Controller
     {
         $data=$this->bean->getList();
         return view('home', ['results' => $data]);
+    }
+    
+    public function getBean(Request $request)
+    {
+        $id=$request->id;
+        $data=$this->bean->getOne($id);
+        
+        return view('home', ['data' => $data]);
     }
 }
