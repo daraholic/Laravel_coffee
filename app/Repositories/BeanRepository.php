@@ -21,4 +21,25 @@ class BeanRepository
     {
         return $this->bean->findOrfail($id);
     }
+
+    public function addBean($request)
+    { 
+        $name=$request->name;
+        $roast=$request->roast;
+        $regin=$request->regin;
+        $flavor=$request->flavor;
+        return $this->bean->create(['name'=>$name,'roast'=>$roast,'regin'=>$regin,'flavor'=>$flavor,]);
+    }
+
+    public function update($request)
+    {
+        $id=$request->id;
+        $bean = $this->bean->findOrFail($id);
+
+        $name=$request->name;
+        $roast=$request->roast;
+        $regin=$request->regin;
+        $flavor=$request->flavor;
+        return $bean->update(['name'=>$name,'roast'=>$roast,'regin'=>$regin,'flavor'=>$flavor,]);
+    }
 }

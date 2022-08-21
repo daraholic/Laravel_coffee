@@ -10,7 +10,7 @@ class Bean extends Model
     use HasFactory;
 
     public $timestamps = false;
-    protected $fillable = ['name','roast','regin','flaveor'];
+    protected $fillable = ['name','roast','regin','flavor'];
 
     public function parameter()
     {

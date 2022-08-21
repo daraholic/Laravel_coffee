@@ -23,4 +23,14 @@ class BeanService
         $data=$this->bean->getOne($id);
         return $data;
     }
+
+    public function addBean($request)
+    {
+        return $this->bean->addBean($request);
+    }
+
+    public function update($request)
+    {
+        return $this->bean->update($request);
+    }
 }

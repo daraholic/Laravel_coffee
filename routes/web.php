@@ -21,4 +21,9 @@ Route::get('/', function () {
 
 Route::get('/bean', [BeanController::class, 'getBeanList']);
 Route::get('/bean/{id}', [BeanController::class, 'getBean']);
+Route::get('/add', [BeanController::class, 'add']);
+Route::post('/save', [BeanController::class, 'save']);
+Route::post('/edit/{id}', [BeanController::class, 'edit']);
+Route::put('/{id}', [BeanController::class, 'update']);
+
 Route::get('/parameter', [ParameterController::class, 'getParameterList']);
