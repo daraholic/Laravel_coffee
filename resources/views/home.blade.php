@@ -29,7 +29,6 @@
       </form>
     </td>
     <td>
-
       <form action="/{{$result->id}}" method="POST">
         @method('DELETE')
         @csrf

@@ -25,5 +25,6 @@ Route::get('/add', [BeanController::class, 'add']);
 Route::post('/save', [BeanController::class, 'save']);
 Route::post('/edit/{id}', [BeanController::class, 'edit']);
 Route::put('/{id}', [BeanController::class, 'update']);
+Route::delete('/{id}', [BeanController::class, 'delete']);
 
 Route::get('/parameter', [ParameterController::class, 'getParameterList']);

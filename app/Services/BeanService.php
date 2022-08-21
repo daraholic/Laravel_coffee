@@ -33,4 +33,11 @@ class BeanService
     {
         return $this->bean->update($request);
     }
+
+    public function deleteBean($id)
+    {
+        $id= $this->bean->deleteBean($id);
+
+        return $id;
+    }
 }

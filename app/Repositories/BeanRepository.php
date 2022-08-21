@@ -42,4 +42,10 @@ class BeanRepository
         $flavor=$request->flavor;
         return $bean->update(['name'=>$name,'roast'=>$roast,'regin'=>$regin,'flavor'=>$flavor,]);
     }
+
+    public function deleteBean($id)
+    {
+        $bean = $this->bean->findOrFail($id);
+        return $bean->delete();
+    }
 }

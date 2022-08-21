@@ -59,4 +59,10 @@ class BeanController extends Controller
         $this->bean->update($request);
         return redirect('/bean');
     }
+
+    public function delete($id)
+    {
+        $this->bean->deleteBean($id);
+        return redirect('/bean');
+    }
 }
