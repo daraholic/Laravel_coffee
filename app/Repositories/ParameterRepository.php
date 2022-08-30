@@ -17,29 +17,35 @@ class ParameterRepository
         return $this->parameter->all();
     }
     
-    // public function addMessage($name,$message)
-    // { 
-    //     return $this->message->create(['name'=>$name,'message'=>$message,]);
-    // }
+    public function getOne($id)
+    {
+        return $this->parameter->findOrfail($id);
+    }
 
-    // public function deleteMessage($id)
-    // {
-    //     $message = $this->message->findOrFail($id);
-    //     return $message->delete();
-    // }
+    public function addParameter($request)
+    { 
+        $gram=$request->gram;
+        $water=$request->water;
+        $brewRatio=$request->brewRatio;
+        $time=$request->time;
+        return $this->parameter->create(['gram'=>$gram,'water'=>$water,'brewRatio'=>$brewRatio,'time'=>$time,]);
+    }
 
-    // public function getOne($id)
-    // {
-    //     return $this->message->find($id);
-    // }
+    public function update($request)
+    {
+        $id=$request->id;
+        $parameter = $this->parameter->findOrFail($id);
+        $gram=$request->gram;
+        $water=$request->water;
+        $brewRatio=$request->brewRatio;
+        $time=$request->time;
+        return $parameter->update(['gram'=>$gram,'water'=>$water,'brewRatio'=>$brewRatio,'time'=>$time,]);
+    }
 
-    // public function updateMessage($id,$name,$message)
-    // {
-    //     $data=$this->message->findOrFail($id);
-    //     $data->name=$name;
-    //     $data->message=$message;
-    //     $data->save();
-    //     return $data;
-    // }
+    public function deleteParameter($id)
+    {
+        $parameter = $this->parameter->findOrFail($id);
+        return $parameter->delete();
+    }
 
 }

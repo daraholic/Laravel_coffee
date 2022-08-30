@@ -18,32 +18,26 @@ class ParameterService
         return $this->parameter->getList();
     }
 
-    // public function addMessage($request)
-    // {
-    //     $name = data_get($request,'name');
-    //     $message = data_get($request,'message');
-        
-    //     return $this->message->addMessage($name,$message);
-    // }
+    public function getOne($id)
+    {
+        $data=$this->parameter->getOne($id);
+        return $data;
+    }
 
-    // public function deleteMessage($id)
-    // {
-    //     $id= $this->message->deleteMessage($id);
+    public function addParameter($request)
+    {
+        return $this->parameter->addParameter($request);
+    }
 
-    //     return $id;
-    // }
+    public function update($request)
+    {
+        return $this->parameter->update($request);
+    }
 
-    // public function getOne($id)
-    // {
-    //     return $this->message->getOne($id);
-    // }
+    public function deleteParameter($id)
+    {
+        $id= $this->parameter->deleteParameter($id);
 
-    // public function updateMessage($request,$id)
-    // {
-    //     $id=data_get($request,'id');
-    //     $name = data_get($request,'name');
-    //     $message = data_get($request,'message');
- 
-    //     return $this->message->updateMessage($id,$name,$message);
-    // }
+        return $id;
+    }
 }

@@ -15,6 +15,7 @@ class BeanRepository
     public function getList()
     {
         return $this->bean->all();
+        return $this->where('name', 'like', '%' . $all . '%')->get();
     }
     
     public function getOne($id)
