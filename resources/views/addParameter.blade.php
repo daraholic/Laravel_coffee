@@ -12,12 +12,11 @@
     <h1>add your coffee parameter together!</h1>
     <form method="POST" action="/save">
         @csrf
-        {{-- <th></th> --}}
-        beanName:<input type="text" name="gram">
         gram:<input type="text" name="gram">
         water:<input type="text" name="water">
         brewRatio:<input type="text" name="brewRatio">
         time:<input type="text" name="time">
+        bean:<input type="text" name="bean_id">
         <button>OK</button>
     </form>
 </body>

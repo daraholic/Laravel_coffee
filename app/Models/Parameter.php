@@ -10,7 +10,6 @@ class Parameter extends Model
     use Uuid;
 
     protected $fillable = [
-        'id',
         'gram',
         'water',
         'brewRatio',
