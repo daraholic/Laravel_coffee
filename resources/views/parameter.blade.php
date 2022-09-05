@@ -23,13 +23,13 @@
     <td>{{$result->brewRatio}}</td>
     <td>{{$result->time}}</td>
     <td>
-      <form action="/edit/{{$result->id}}" method="POST">
+      <form action="/editParameter/{{$result->id}}" method="POST">
         @csrf
         <button>edit</button>
       </form>
     </td>
     <td>
-      <form action="/{{$result->id}}" method="POST">
+      <form action="/deleteParameter/{{$result->id}}" method="POST">
         @method('DELETE')
         @csrf
         <button>delete</button>
@@ -44,7 +44,7 @@
 <p>To make coffee better, you need to learn and practice.</p>
 
 <h3>Now,if you found some interesting data ,add here</h3>
-<button><a href="/add">add</a></button>
+<button><a href="/addPatameter">add</a></button>
  
 </body>
 </html>

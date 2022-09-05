@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Parameter extends Model
 {
-    use Uuid;
-
+    public $timestamps = false;
     protected $fillable = [
         'gram',
         'water',

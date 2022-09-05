@@ -7,7 +7,7 @@
     <title>edit</title>
 </head>
 <body>
-    <form action="/{{$data->id}}" method="POST">
+    <form action="/updateParameter/{{$data->id}}" method="POST">
         @method('PUT')
         @csrf
         gram:<input type="text" name="gram" value="{{$data->gram}}">

@@ -7,7 +7,7 @@
     <title>edit</title>
 </head>
 <body>
-    <form action="/{{$data->id}}" method="POST">
+    <form action="/updateBean/{{$data->id}}" method="POST">
         @method('PUT')
         @csrf
         name:<input type="text" name="name" value="{{$data->name}}">

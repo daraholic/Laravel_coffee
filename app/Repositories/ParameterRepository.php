@@ -28,7 +28,8 @@ class ParameterRepository
         $water=$request->water;
         $brewRatio=$request->brewRatio;
         $time=$request->time;
-        return $this->parameter->create(['gram'=>$gram,'water'=>$water,'brewRatio'=>$brewRatio,'time'=>$time,]);
+        $bean_id=$request->bean_id;
+        return $this->parameter->create(['gram'=>$gram,'water'=>$water,'brewRatio'=>$brewRatio,'time'=>$time,'bean_id'=>$bean_id,]);
     }
 
     public function update($request)

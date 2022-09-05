@@ -62,6 +62,6 @@ class ParameterController extends Controller
     public function delete($id)
     {
         $this->parameter->deleteParameter($id);
-        return redirect('/Parameter');
+        return redirect('/parameter');
     }
 }

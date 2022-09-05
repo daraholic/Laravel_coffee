@@ -30,13 +30,13 @@
     <td>{{$result->regin}}</td>
     <td>{{$result->flavor}}</td>
     <td>
-      <form action="/edit/{{$result->id}}" method="POST">
+      <form action="/editBean/{{$result->id}}" method="POST">
         @csrf
         <button>edit</button>
       </form>
     </td>
     <td>
-      <form action="/{{$result->id}}" method="POST">
+      <form action="/deleteBean/{{$result->id}}" method="POST">
         @method('DELETE')
         @csrf
         <button>delete</button>
@@ -51,7 +51,7 @@
 <p>To make coffee better, you need to learn and practice.</p>
 
 <h3>Now,if you bought a new bean,add to here</h3>
-<button><a href="/add">add</a></button>
+<button><a href="/addBean">add</a></button>
 
 </body>
 </html>

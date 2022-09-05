@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>add your New Bean!</h1>
-    <form method="POST" action="/save">
+    <form method="POST" action="/saveBean">
         @csrf
         name:<input type="text" name="name">
         roast:<input type="text" name="roast">

@@ -10,7 +10,7 @@
 
 <body>
     <h1>add your coffee parameter together!</h1>
-    <form method="POST" action="/save">
+    <form method="POST" action="/saveParameter">
         @csrf
         gram:<input type="text" name="gram">
         water:<input type="text" name="water">
