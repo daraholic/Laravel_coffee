@@ -10,11 +10,20 @@
 <body>
     <h2>coffee data list</h2>
     <div class="search-container">
-      <form action="/bean">
-        <input type="text" placeholder="Search.." name="search">
+      <form action="/bean" method="GET">
+        <input type="text" placeholder="Search.." name="key">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
+    @if(isset($error))
+    <div>{{$error}}</div>
+    @endif
+    @if(empty($results))
+        <div class="bg-light p-5 rounded mt-3">
+            <h1>No data found.</h1>
+            <p class="lead">try create new data.</p>
+        </div>
+    @else
 <table style="width:100%">
   <tr>
     <th>name</th>
@@ -45,6 +54,7 @@
     @endforeach
   </tr>
 </div>
+@endif
 
 </table>
 <a href="/parameter">get all parameter</a>

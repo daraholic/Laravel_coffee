@@ -13,9 +13,9 @@ class BeanService
         $this->bean = $beanRepository;
     }
 
-    public function getList()
+    public function getList($key)
     {
-        return $this->bean->getList();
+        return $this->bean->getList($key);
     }
 
     public function getOne($id)

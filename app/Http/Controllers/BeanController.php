@@ -14,9 +14,17 @@ class BeanController extends Controller
         $this->bean = $beanService;
     }
 
-    public function getBeanList()
-    {
-        $data=$this->bean->getList();
+    public function getBeanList(Request $request)
+    {   
+        $key=$request->key;
+        $validator = Validator::make($request->all(), [
+            'key' => 'nullable|alpha',
+        ]);
+        if ($validator->fails()) {
+            $errors = $validator->errors()->toArray();
+            return response()->view('home', ['error' => $errors['key'][0]], 400);
+        }
+        $data=$this->bean->getList($key);
         return view('home', ['results' => $data]);
     }
     

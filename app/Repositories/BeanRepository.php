@@ -12,10 +12,15 @@ class BeanRepository
         $this->bean = $bean;
     }
 
-    public function getList()
+    public function getList($key)
     {
-        return $this->bean->all();
-        return $this->where('name', 'like', '%' . $all . '%')->get();
+        return $this->bean->where(function ($query) use($key) {
+            $query->where('name', 'like', '%' . $key . '%')
+               ->orWhere('roast', 'like', '%' . $key . '%')
+               ->orWhere('regin', 'like', '%' . $key . '%')
+               ->orWhere('flavor', 'like', '%' . $key . '%');
+          })->orderBy("created_at", "DESC")
+    ->get();
     }
     
     public function getOne($id)
