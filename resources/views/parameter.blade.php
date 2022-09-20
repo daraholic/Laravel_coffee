@@ -14,14 +14,15 @@
     <th>water</th>
     <th>brewRatio</th>
     <th>time</th>
+    <th>beanName</th>
   </tr>
-  @if(empty($data))
   @foreach($results as $result)
   <tr style="text-align:center">
     <td>{{$result->gram}}</td>
     <td>{{$result->water}}</td>
     <td>{{$result->brewRatio}}</td>
     <td>{{$result->time}}</td>
+    <td>{{$result->bean_id}}</td>
     <td>
       <form action="/editParameter/{{$result->id}}" method="POST">
         @csrf
@@ -37,7 +38,6 @@
     </td>
   </tr>
   @endforeach
-  @endif
 
 </table>
 <a href="/bean">bean list</a>

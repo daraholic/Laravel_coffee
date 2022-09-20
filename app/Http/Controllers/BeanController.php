@@ -26,6 +26,7 @@ class BeanController extends Controller
         }
         $data=$this->bean->getList($key);
         return view('home', ['results' => $data]);
+        return view('editBean', ['results' => $data]);
     }
     
     public function getBean(Request $request)

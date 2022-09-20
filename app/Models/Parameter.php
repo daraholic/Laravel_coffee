@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Parameter extends Model
 {
-    public $timestamps = false;
     protected $fillable = [
         'gram',
         'water',

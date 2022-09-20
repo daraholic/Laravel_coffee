@@ -14,6 +14,12 @@
         roast:<input type="text" name="roast" value="{{$data->roast}}">
         regin:<input type="text" name="regin" value="{{$data->regin}}">
         flavor:<input type="text" name="flavor" value="{{$data->flavor}}">
+        beanName<select name="bean_id">
+            @foreach ($results as $key => $value)
+                <option value="{{ $value }}"
+                {{ (old("results") == $value ? "selected":"") }}>{{ $value }}</option>
+            @endforeach
+            </select>
         <button>OK</button>
     </form>
 </body>

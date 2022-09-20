@@ -15,8 +15,7 @@
         gram:<input type="text" name="gram">
         water:<input type="text" name="water">
         brewRatio:<input type="text" name="brewRatio">
-        time:<input type="text" name="time">
-        bean:<input type="text" name="bean_id">
+        time:<input type="text" name="time">        
         <button>OK</button>
     </form>
 </body>
